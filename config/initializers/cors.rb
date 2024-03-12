@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins '*'  # Adjust this to allow requests from specific domains, or use '*' for all domains
+      origins 'http://127.0.0.1:3000/'  # Adjust this to allow requests from specific domains, or use '*' for all domains
   
       resource '*',  # This defines which paths are accessible, '*' all paths are accessible
         headers: :any,  # Allows all headers

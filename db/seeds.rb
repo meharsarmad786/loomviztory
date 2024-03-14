@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Post.destroy_all
+
+25.times do
+    Post.create!(
+      title: Faker::Book.title,
+      body: Faker::Lorem.sentence(word_count: 100)
+    )
+end
